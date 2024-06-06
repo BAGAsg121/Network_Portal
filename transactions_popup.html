@@ -35,7 +35,7 @@
 </head>
 <body>
     <h1>Transactions for User: <span id="userName"></span></h1>
-    <table id="transactionsTable">
+    <table id="Transactions_Report">
         <thead>
             <tr>
                 <th>Date</th>
@@ -67,7 +67,7 @@
 
         // Populate transactions table
         fetchTransactions(userName).then(transactions => {
-            const tbody = document.getElementById('transactionsTable').querySelector('tbody');
+            const tbody = document.getElementById('Transactions_Report').querySelector('tbody');
             transactions.forEach(transaction => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `<td>${transaction.date}</td><td>${transaction.merchant}</td><td>${transaction.amount}</td>`;
